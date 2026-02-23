@@ -642,6 +642,104 @@
     }
     .form-submit:hover { background: var(--blue-mid); transform: translateY(-2px); box-shadow: 0 8px 24px rgba(200,39,39,.35); }
 
+    /* ─── Careers ───────────────────────────────────────────── */
+    .careers__grid {
+      display: grid;
+      grid-template-columns: 1fr 1.2fr;
+      gap: 80px;
+      align-items: start;
+    }
+    .careers__benefits {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      margin: 32px 0 36px;
+    }
+    .benefit {
+      display: flex;
+      align-items: flex-start;
+      gap: 14px;
+    }
+    .benefit__icon {
+      width: 40px; height: 40px;
+      border-radius: 10px;
+      background: rgba(200,39,39,.1);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.1rem;
+      flex-shrink: 0;
+    }
+    .benefit__text strong {
+      display: block;
+      font-weight: 600;
+      color: var(--navy);
+      margin-bottom: 2px;
+    }
+    .benefit__text span { font-size: .9rem; color: var(--text-mid); }
+    .jobs__list { display: flex; flex-direction: column; gap: 16px; }
+    .job-card {
+      background: var(--bg-white);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 24px 26px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+      transition: var(--transition);
+    }
+    .job-card:hover {
+      border-color: var(--blue);
+      box-shadow: var(--shadow-md);
+      transform: translateX(4px);
+    }
+    .job-card__info { flex: 1; }
+    .job-card__title {
+      font-weight: 700;
+      font-size: 1rem;
+      color: var(--navy);
+      margin-bottom: 6px;
+    }
+    .job-card__meta {
+      display: flex;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+    .job-card__meta span {
+      font-size: .8rem;
+      color: var(--text-muted);
+      display: flex;
+      align-items: center;
+      gap: 4px;
+    }
+    .job-card__tag {
+      font-size: .72rem;
+      font-weight: 700;
+      padding: 4px 12px;
+      border-radius: 100px;
+      background: rgba(200,39,39,.1);
+      color: var(--blue);
+      white-space: nowrap;
+    }
+    .job-card__arrow {
+      font-size: 1.1rem;
+      color: var(--blue);
+      flex-shrink: 0;
+    }
+    .careers__cta {
+      margin-top: 28px;
+      padding: 24px 28px;
+      background: var(--bg-light);
+      border-radius: var(--radius);
+      border-left: 4px solid var(--blue);
+    }
+    .careers__cta p {
+      font-size: .92rem;
+      color: var(--text-mid);
+      margin-bottom: 14px;
+    }
+
     /* ─── Footer ────────────────────────────────────────────── */
     .footer {
       background: #080f1d;
@@ -725,6 +823,7 @@
     @media (max-width: 900px) {
       .about__grid,
       .divisions__grid,
+      .careers__grid,
       .contact__grid { grid-template-columns: 1fr; gap: 40px; }
       .solutions__grid { grid-template-columns: 1fr 1fr; }
       .footer__grid { grid-template-columns: 1fr 1fr; }
@@ -761,6 +860,7 @@
       <li><a href="#products">Products</a></li>
       <li><a href="#solutions">Solutions</a></li>
       <li><a href="#certifications">Certifications</a></li>
+      <li><a href="#careers">Careers</a></li>
       <li><a href="#contact" class="navbar__cta">Contact Us</a></li>
     </ul>
     <div class="navbar__hamburger" id="hamburger" role="button" aria-label="Open menu" tabindex="0">
@@ -775,6 +875,7 @@
   <a href="#products"      onclick="closeMenu()">Products</a>
   <a href="#solutions"     onclick="closeMenu()">Solutions</a>
   <a href="#certifications"onclick="closeMenu()">Certifications</a>
+  <a href="#careers"       onclick="closeMenu()">Careers</a>
   <a href="#contact"       onclick="closeMenu()">Contact Us</a>
 </div>
 
@@ -1066,6 +1167,110 @@
   </div>
 </section>
 
+<!-- ═══════════════════════════════════════ CAREERS ════ -->
+<section class="section section--alt" id="careers">
+  <div class="container">
+    <div class="careers__grid">
+      <div class="reveal">
+        <span class="tag">Careers</span>
+        <h2 class="section-heading">Grow with a Canadian industry leader</h2>
+        <p class="section-sub">
+          At CCC Plastics Limited, we believe our people are our greatest asset. We offer a
+          dynamic, collaborative environment where your expertise drives real impact.
+        </p>
+        <div class="careers__benefits">
+          <div class="benefit">
+            <div class="benefit__icon">🌱</div>
+            <div class="benefit__text">
+              <strong>Career Development</strong>
+              <span>Ongoing training, mentorship, and clear paths for advancement.</span>
+            </div>
+          </div>
+          <div class="benefit">
+            <div class="benefit__icon">🤝</div>
+            <div class="benefit__text">
+              <strong>Collaborative Culture</strong>
+              <span>Work alongside experienced professionals in a supportive team environment.</span>
+            </div>
+          </div>
+          <div class="benefit">
+            <div class="benefit__icon">🏥</div>
+            <div class="benefit__text">
+              <strong>Competitive Benefits</strong>
+              <span>Comprehensive health, dental, and retirement plans for you and your family.</span>
+            </div>
+          </div>
+          <div class="benefit">
+            <div class="benefit__icon">🇨🇦</div>
+            <div class="benefit__text">
+              <strong>Canadian Roots</strong>
+              <span>Be part of a proudly Canadian company with over 100 years of industry heritage.</span>
+            </div>
+          </div>
+        </div>
+        <a href="mailto:careers@ccc-group.com" class="btn btn-primary">Send Your Resume →</a>
+      </div>
+      <div class="reveal">
+        <h3 style="font-size:1.1rem;font-weight:700;color:var(--navy);margin-bottom:24px;">Current Openings</h3>
+        <div class="jobs__list">
+          <div class="job-card">
+            <div class="job-card__info">
+              <div class="job-card__title">Technical Sales Representative</div>
+              <div class="job-card__meta">
+                <span>📍 Toronto, ON</span>
+                <span>⏱ Full-Time</span>
+                <span>🏢 CCC Plastics</span>
+              </div>
+            </div>
+            <span class="job-card__tag">Sales</span>
+            <span class="job-card__arrow">→</span>
+          </div>
+          <div class="job-card">
+            <div class="job-card__info">
+              <div class="job-card__title">Colour Technologist</div>
+              <div class="job-card__meta">
+                <span>📍 Toronto, ON</span>
+                <span>⏱ Full-Time</span>
+                <span>🏢 CCC Plastics</span>
+              </div>
+            </div>
+            <span class="job-card__tag">Technical</span>
+            <span class="job-card__arrow">→</span>
+          </div>
+          <div class="job-card">
+            <div class="job-card__info">
+              <div class="job-card__title">Supply Chain Coordinator</div>
+              <div class="job-card__meta">
+                <span>📍 Toronto, ON</span>
+                <span>⏱ Full-Time</span>
+                <span>🏢 Operations</span>
+              </div>
+            </div>
+            <span class="job-card__tag">Operations</span>
+            <span class="job-card__arrow">→</span>
+          </div>
+          <div class="job-card">
+            <div class="job-card__info">
+              <div class="job-card__title">Sulphur Products Specialist</div>
+              <div class="job-card__meta">
+                <span>📍 Toronto, ON</span>
+                <span>⏱ Full-Time</span>
+                <span>🏢 CCC Sulphur</span>
+              </div>
+            </div>
+            <span class="job-card__tag">Technical</span>
+            <span class="job-card__arrow">→</span>
+          </div>
+        </div>
+        <div class="careers__cta">
+          <p>Don't see a role that fits? We're always looking for talented people to join our team.</p>
+          <a href="mailto:careers@ccc-group.com" class="btn btn-ghost" style="font-size:.88rem;padding:10px 20px;">Submit a General Application</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- ═══════════════════════════════════════ CONTACT ═══ -->
 <section class="section" id="contact">
   <div class="container">
@@ -1176,7 +1381,7 @@
           <li><a href="#about">History</a></li>
           <li><a href="#about">Facilities</a></li>
           <li><a href="#certifications">Quality Programs</a></li>
-          <li><a href="#contact">Careers</a></li>
+          <li><a href="#careers">Careers</a></li>
         </ul>
       </div>
       <div class="footer__col">
